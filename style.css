@@ -1,0 +1,284 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    color: #333;
+    padding: 20px;
+    background-image: url('bg.jpg'); /* Replace with your image file name */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container styling */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    transform: translateY(20px);
+    background-image: url('container.jpg'); /* Replace with your image file name */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 700; /* Slightly bold font weight */
+    color: #F0EAAC; /* Keep the existing color */
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #F0EAAC, #e7e1dc); /* Gradient overlay */
+    
+    -webkit-text-fill-color: transparent;
+    text-shadow: 
+        1px 1px 2px rgba(0, 0, 0, 0.3), /* Subtle shadow for depth */
+        0 0 10px rgba(0, 0, 0, 0.2); /* Soft glow effect */
+    letter-spacing: 0.5px; /* Slight letter spacing for readability */
+    text-transform: uppercase; /* Uppercase text for impact */
+    border-bottom: 4px solid #ff7e5f; /* Bottom border for emphasis */
+    padding-bottom: 10px; /* Space for the border */
+    margin-bottom: 20px; /* Adjust margin for spacing */
+    animation: subtleGlow 2s infinite alternate, fadeInOut 3s infinite; /* Add subtle animations */
+}
+
+/* Subtle glow animation */
+@keyframes subtleGlow {
+    0% {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Fade in and out animation */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/* Form styling */
+form {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #EBD3F8;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #17153B;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #ff7e5f;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 126, 95, 0.5);
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: linear-gradient(135deg, #83807f, #feb47b);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: translateY(-3px);
+}
+
+button:active {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    transform: scale(0.98);
+}
+
+/* Resume Output styling */
+.resume-output {
+    padding: 20px;
+    background: linear-gradient(135deg, #381e162a, #0c0b0a);
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    color: #EBD3F8;
+}
+
+.resume-header {
+    margin-bottom: 30px;
+}
+
+.resume-header h2 {
+    font-size: 2.5rem;
+    color: #ff7e5f;
+}
+
+.resume-header p {
+    font-size: 1.2rem;
+    color: #ffff;
+}
+
+.resume-output section {
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.resume-output h2 {
+    font-size: 2rem;
+    color: #fff;
+    border-bottom: 2px solid #ff7e5f;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.resume-output h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 6px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-radius: 3px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.resume-output ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resume-output ul li {
+    background-color: orange;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    color: #444;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-output ul li:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Editable resume styling */
+.editable {
+    border: 1px dashed #ff7e5f;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 40px;
+}
+
+.editable:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 126, 95, 0.5);
+}
+#edit-button.hidden {
+    display: none;
+}
+
+#edit-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: linear-gradient(135deg, #83807f, #feb47b);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#edit-button:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: translateY(-3px);
+}
+
+#edit-button:active {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    transform: scale(0.98);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    button, .edit-button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    button, .edit-button {
+        font-size: 0.9rem;
+    }
+}
